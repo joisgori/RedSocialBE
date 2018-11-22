@@ -12,9 +12,9 @@ head
   link(rel='stylesheet' href='css/stryleform.css')
 header
   h1 Abre una cuenta y ponte en contacto con tus amigos y la musica
-  button.btn.btn-primary(type='button')
-    a(href='index.html') REGRESAR
-form(action='formulario.html' method='post')
+  
+  a(href='/') REGRESAR
+form(action='/users/signup' method='post')
   fieldset
     .panel.panel-primary
       .panel-heading
@@ -27,31 +27,31 @@ form(action='formulario.html' method='post')
             .input-group
               .input-group-addon
                 i.fa.fa-user
-              input.form-control(type='text' placeholder='Ingrese Nombre' aria-describedby='basic-addon1' required='')
+              input.form-control(type='text' placeholder='Ingrese Nombre' aria-describedby='basic-addon1' required='' name='nombre')
           .form-group.col-md-6
             label Apellido
             .input-group
               .input-group-addon
                 i.fa.fa-user
-              input.form-control(type='text' placeholder='Ingrese su apellido' aria-describedby='basic-addon1' required='')
+              input.form-control(type='text' placeholder='Ingrese su apellido' aria-describedby='basic-addon1' required='' name='apellido')
           .form-group.col-md-6
             label Correo Electronico
             .input-group
               .input-group-addon
                 i.fa.fa-at
-              input.form-control(type='email' placeholder='Ingrese su correo electronico' aria-describedby='basic-addon1' data-validation='required' data-validation-error-msg='rellene este campo')
+              input.form-control(type='email' placeholder='Ingrese su correo electronico' aria-describedby='basic-addon1' data-validation='required' data-validation-error-msg='rellene este campo' name='correo')
           .form-group.col-md-6
             label Contrase&ntilde;a
             .input-group
               .input-group-addon
                 i.fa.fa-key
-              input.form-control(type='password' placeholder='Nueva contraseña' aria-describedby='basic-addon1' required='')
+              input.form-control(type='password' placeholder='Nueva contraseña' aria-describedby='basic-addon1' required='' name="password")
           .form-group.col-md-6
             label Fecha de nacimiento
             .input-group
               .input-group-addon
                 i.fa.fa-calendar
-              input.form-control(type='date' placeholder='Ingrese su fechga de nacimiento' aria-describedby='basic-addon1' required='')
+              input.form-control(type='date' placeholder='Ingrese su fechga de nacimiento' aria-describedby='basic-addon1' required='' name="fecha")
           .col-md-6
             span.input-group-btn
               button.btn.btn-success.btn-lg.btn-block(input='' type='submit')
